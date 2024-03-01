@@ -1,0 +1,1184 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title></title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+			
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+        <a href="#!" class="brand-logo black"><img src="http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'></span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Feb 29, 2024 09:04:29 am</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Features</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='$85%'>
+                    <span class='strong'>6</span> features passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='14%'>
+                    1</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Scenarios</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='child-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='94%'>
+                    <span class='strong'>18</span> scenarios passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='5%'>
+                    1</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+        <div class='col s12 m4 l4 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Steps</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='grandchild-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='98%'>
+                    <span class='strong'>96</span> steps passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1%'>
+                    1</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
+                    0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>Search by TRN no. on the View Checking Accounts</span>
+						<span class='test-time'>Feb 29, 2024 09:04:30 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='5' status='pass'>
+
+	<span class='duration right label'>00 00 16.712</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successful search by TRN no. on the View Checking Accounts</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='8' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.i_am_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the sign in page</div>
+
+
+		</li>
+		<li test-id='10' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.i_enter_username_and_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter Username and password</div>
+
+
+		</li>
+		<li test-id='11' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.i_click_on_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on sign in button</div>
+
+
+		</li>
+		<li test-id='12' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.i_click_on_checking())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on Checking</div>
+
+
+		</li>
+		<li test-id='13' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.select_view_checking())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Select View Checking</div>
+
+
+		</li>
+		<li test-id='14' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.validate_search_box_with_valid_trn())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validate Search box with valid TRN</div>
+
+
+		</li>
+		<li test-id='15' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.validate_search_box_with_invalid_trn())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validate Search box with invalid TRN</div>
+
+
+		</li>
+		<li test-id='16' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.validate_search_box_with_empty_trn())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validate Search box with empty TRN</div>
+
+
+		</li>
+		<li test-id='17' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.checking.validate_search_box_with_trn_search_with_spaces())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validate Search box with TRN search with spaces</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>Testing dbankdemo Deposit into Account feature</span>
+						<span class='test-time'>Feb 29, 2024 09:04:46 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='20' status='pass'>
+
+	<span class='duration right label'>00 00 26.711</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Testing Deposit into Account</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='23' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.Deposit_Step_def.user_is_on_deposit_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on Deposit page</div>
+
+
+		</li>
+		<li test-id='25' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.Deposit_Step_def.validating_reset_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Validating Reset button</div>
+
+
+		</li>
+		<li test-id='26' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.Deposit_Step_def.validating_submit_button_with_no_data())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validating Submit button with no data</div>
+
+
+		</li>
+		<li test-id='27' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.Deposit_Step_def.validating_submit_button_with_amount_field_as_zero())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validating Submit button with Amount field as zero</div>
+
+
+		</li>
+		<li test-id='28' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.Deposit_Step_def.validating_succesful_deposit_transaction_with_valid_credentials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validating succesful deposit transaction with valid credentials</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Search by TRN no. on the View Savings Accounts</span>
+						<span class='test-time'>Feb 29, 2024 09:05:13 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='31' status='pass'>
+
+	<span class='duration right label'>00 00 21.234</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successful search by TRN no. on the View Savings Accounts</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='34' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.i_am_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the sign in page-</div>
+
+
+		</li>
+		<li test-id='35' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.i_enter_username_and_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I enter Username and password-</div>
+
+
+		</li>
+		<li test-id='36' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.i_click_on_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I click on sign in button-</div>
+
+
+		</li>
+		<li test-id='37' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.i_click_on_savings())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I click on Savings</div>
+
+
+		</li>
+		<li test-id='38' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.select_view_Savings())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Select View Savings</div>
+
+
+		</li>
+		<li test-id='39' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.validate_search_box_with_amount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validate Search box with Amount</div>
+
+
+		</li>
+		<li test-id='40' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.validate_search_box_with_negative_trn())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validate Search box with negative TRN</div>
+
+
+		</li>
+		<li test-id='41' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.validate_search_box_with_category())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validate Search box with category</div>
+
+
+		</li>
+		<li test-id='42' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.savings_stepdef.validate_search_box_with_date())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validate Search box with date</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>User Signup</span>
+						<span class='test-time'>Feb 29, 2024 09:05:34 am</span>
+						<span class='test-status right fail'>Fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='45' status='fail'>
+
+	<span class='duration right label'>00 00 05.322</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario: Signup with invalid DOB</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='48' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_am_on_the_signup_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</div>
+
+
+		</li>
+		<li test-id='49' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_fill_in_the_signup_form_with_a_invalid_date_of_birth())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with a invalid date of birth</div>
+
+
+		</li>
+		<li test-id='50' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_click_the_next_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</div>
+
+
+		</li>
+		<li test-id='51' class='node then Fail' status='Fail'>
+			<div class="step-name" title="(mystepdefs.signup.i_should_see_an_error_message_indicating_please_match_the_requested_format())"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then I should see an error message indicating please match the requested format</div>
+
+
+					<textarea disabled class="code-block">java.lang.AssertionError: actual and expected error did not match
+	at org.testng.Assert.fail(Assert.java:99)
+	at mystepdefs.signup.i_should_see_an_error_message_indicating_please_match_the_requested_format(signup.java:121)
+	at ✽.I should see an error message indicating please match the requested format(file:///C:/Users/hey1d/OneDrive/Desktop/learn/digitalbank/src/test/resources/features/all/sign.feature:7)
+</textarea>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='53' status='pass'>
+
+	<span class='duration right label'>00 00 10.333</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Signup with Existing Email</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='56' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_am_on_the_signup_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</div>
+
+
+		</li>
+		<li test-id='57' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_fill_in_the_signup_form_with_an_existing_email())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with an existing email</div>
+
+
+		</li>
+		<li test-id='58' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_click_the_next_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</div>
+
+
+		</li>
+		<li test-id='59' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_should_see_an_error_message_indicating_an_account_is_already_registered_with_the_email_address_provided())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see an error message indicating An account is already registered with the email address provided</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario outline node' test-id='61' status='pass'>
+
+	<span class='duration right label'>00 00 26.562</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Signup with Invalid information</div>
+	</div>
+	
+		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>ssn</td><td>email</td><td>password</td><td>field</td></tr><tr><td>4865421657</td><td>asfd@gmail.com</td><td>Demo@123</td><td>ssn</td></tr><tr><td>486461678</td><td>asgmail.com</td><td>Demo@123</td><td>emailAddress</td></tr><tr><td>486461678</td><td>asfd@gmail.com</td><td>afgaDa12</td><td>password</td></tr></table></div>
+	
+	
+	<ul class='steps'>
+		<li test-id='62' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Signup with Invalid information</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='65' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_am_on_the_signup_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</h6>
+
+				</li>
+				<li test-id='66' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_fill_in_the_signup_form_with_an_invalid_ssn_or_email(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with an invalid "4865421657" or "asfd@gmail.com" or "Demo@123"</h6>
+
+				</li>
+				<li test-id='67' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_click_the_next_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</h6>
+
+				</li>
+				<li test-id='68' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_should_see_an_error_message_for_ssn(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see an error message for "ssn"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='70' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Signup with Invalid information</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='73' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_am_on_the_signup_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</h6>
+
+				</li>
+				<li test-id='74' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_fill_in_the_signup_form_with_an_invalid_ssn_or_email(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with an invalid "486461678" or "asgmail.com" or "Demo@123"</h6>
+
+				</li>
+				<li test-id='75' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_click_the_next_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</h6>
+
+				</li>
+				<li test-id='76' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_should_see_an_error_message_for_ssn(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see an error message for "emailAddress"</h6>
+
+				</li>
+			</ul>
+		</li>
+		<li test-id='78' class='node scenario Pass' status='Pass'>
+			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Signup with Invalid information</div>
+
+
+			<ul class='gc steps'>
+				<li test-id='81' class='gc given Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_am_on_the_signup_page()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</h6>
+
+				</li>
+				<li test-id='82' class='gc when Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_fill_in_the_signup_form_with_an_invalid_ssn_or_email(java.lang.String,java.lang.String,java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with an invalid "486461678" or "asfd@gmail.com" or "afgaDa12"</h6>
+
+				</li>
+				<li test-id='83' class='gc and Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_click_the_next_button()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</h6>
+
+				</li>
+				<li test-id='84' class='gc then Pass' status='Pass'>
+					<h6 class="step-name" title="mystepdefs.signup.i_should_see_an_error_message_for_ssn(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see an error message for "password"</h6>
+
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='86' status='pass'>
+
+	<span class='duration right label'>00 00 08.828</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Signup with mismatched passwords</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='89' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_am_on_the_signup_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</div>
+
+
+		</li>
+		<li test-id='90' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_fill_in_the_signup_form_with_an_mismatched_passwords())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with an mismatched passwords</div>
+
+
+		</li>
+		<li test-id='91' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_click_the_next_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</div>
+
+
+		</li>
+		<li test-id='92' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_should_see_an_error_message_indicating_passwords_do_not_match())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see an error message indicating passwords do not match</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='94' status='pass'>
+
+	<span class='duration right label'>00 00 10.973</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Signup with Missing Information</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='97' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_am_on_the_signup_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</div>
+
+
+		</li>
+		<li test-id='98' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_fill_in_the_signup_form_with_missing_information_and_click_next())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with missing information and click next</div>
+
+
+		</li>
+		<li test-id='99' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_click_the_next_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</div>
+
+
+		</li>
+		<li test-id='100' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_should_see_error_messages_indicating_please_fill_out_this_field())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should see error messages indicating please fill out this field</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='102' status='pass'>
+
+	<span class='duration right label'>00 00 10.869</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Successful Signup</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='105' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_am_on_the_signup_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given I am on the signup page</div>
+
+
+		</li>
+		<li test-id='106' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_fill_in_the_signup_form_with_valid_information())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When I fill in the signup form with valid information</div>
+
+
+		</li>
+		<li test-id='107' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_click_the_next_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I click the next button</div>
+
+
+		</li>
+		<li test-id='108' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_should_be_redirected_to_new_form_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be redirected to new form page</div>
+
+
+		</li>
+		<li test-id='109' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_fill_address_tick_terms_checkbox())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And I fill address, tick terms checkbox</div>
+
+
+		</li>
+		<li test-id='110' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.click_on_signup())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And click on signup</div>
+
+
+		</li>
+		<li test-id='111' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signup.i_should_be_redirected_to_signin_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then I should be redirected to signin page</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='113'>
+					<div class='test-heading'>
+						<span class='test-name'>Sign In Functionality</span>
+						<span class='test-time'>Feb 29, 2024 09:06:47 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='114' status='pass'>
+
+	<span class='duration right label'>00 00 09.070</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User signs in with empty password</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='117' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_is_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the sign-in page</div>
+
+
+		</li>
+		<li test-id='118' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_enters_a_valid_username_and_leaves_the_password_field_empty())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters a valid username and leaves the password field empty</div>
+
+
+		</li>
+		<li test-id='119' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.clicks_on_the_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on the sign-in button</div>
+
+
+		</li>
+		<li test-id='120' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_should_not_be_signed_in())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should not be signed in</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='122' status='pass'>
+
+	<span class='duration right label'>00 00 08.776</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User signs in with empty username</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='125' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_is_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the sign-in page</div>
+
+
+		</li>
+		<li test-id='126' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_leaves_the_username_field_empty_and_enters_a_valid_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user leaves the username field empty and enters a valid password</div>
+
+
+		</li>
+		<li test-id='127' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.clicks_on_the_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on the sign-in button</div>
+
+
+		</li>
+		<li test-id='128' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_should_not_be_signed_in())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should not be signed in</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='130' status='pass'>
+
+	<span class='duration right label'>00 00 08.332</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User signs in with invalid password</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='133' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_is_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the sign-in page</div>
+
+
+		</li>
+		<li test-id='134' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_enters_a_valid_username_and_invalid_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters a valid username and invalid password</div>
+
+
+		</li>
+		<li test-id='135' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.clicks_on_the_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on the sign-in button</div>
+
+
+		</li>
+		<li test-id='136' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_should_not_be_signed_in())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should not be signed in</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='138' status='pass'>
+
+	<span class='duration right label'>00 00 10.601</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User signs in with invalid username</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='141' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_is_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the sign-in page</div>
+
+
+		</li>
+		<li test-id='142' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_enters_an_invalid_username_and_valid_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters an invalid username and valid password</div>
+
+
+		</li>
+		<li test-id='143' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.clicks_on_the_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on the sign-in button</div>
+
+
+		</li>
+		<li test-id='144' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_should_not_be_signed_in())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should not be signed in</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='146' status='pass'>
+
+	<span class='duration right label'>00 00 11.340</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User signs in with Remember Me option checked</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='149' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_is_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the sign-in page</div>
+
+
+		</li>
+		<li test-id='150' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_enters_valid_username_and_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters valid username and password</div>
+
+
+		</li>
+		<li test-id='151' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.checks_the_remember_me_option())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And checks the Remember Me option</div>
+
+
+		</li>
+		<li test-id='152' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.clicks_on_the_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on the sign-in button</div>
+
+
+		</li>
+		<li test-id='153' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_should_be_successfully_signed_in())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should be successfully signed in</div>
+
+
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='155' status='pass'>
+
+	<span class='duration right label'>00 00 11.296</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: User signs in with valid credentials</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='158' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_is_on_the_sign_in_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given the user is on the sign-in page</div>
+
+
+		</li>
+		<li test-id='159' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_enters_valid_username_and_password())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When the user enters valid username and password</div>
+
+
+		</li>
+		<li test-id='160' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.clicks_on_the_sign_in_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And clicks on the sign-in button</div>
+
+
+		</li>
+		<li test-id='161' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.signin.the_user_should_be_successfully_signed_in())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then the user should be successfully signed in</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='163'>
+					<div class='test-heading'>
+						<span class='test-name'>Testing dbankdemo Transfer between Accounts feature</span>
+						<span class='test-time'>Feb 29, 2024 09:07:47 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='164' status='pass'>
+
+	<span class='duration right label'>00 00 22.245</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: Testing Transfer between Accounts</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='167' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.transfer.user_is_on_transfer_between_accounts_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User is on Transfer between Accounts page</div>
+
+
+		</li>
+		<li test-id='169' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.transfer.validating_reset_button_of_transfer_between_accounts_page())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Validating Reset button of Transfer between Accounts page</div>
+
+
+		</li>
+		<li test-id='170' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.transfer.validating_submit_button_without_any_data())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validating Submit button without any data</div>
+
+
+		</li>
+		<li test-id='171' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.transfer.validating_submit_button_with_amount_as_zero())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Validating Submit button with amount as zero</div>
+
+
+		</li>
+		<li test-id='172' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.transfer.validating_succesful_transfer_between_accounts_transaction_with_valid_credentials())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Validating succesful Transfer between Accounts transaction with valid credentials</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='174'>
+					<div class='test-heading'>
+						<span class='test-name'>withdraw</span>
+						<span class='test-time'>Feb 29, 2024 09:08:09 am</span>
+						<span class='test-status right pass'>Pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+
+<div class='scenario node' test-id='175' status='pass'>
+
+	<span class='duration right label'>00 00 39.252</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario: user perform withdraw Test</div>
+	</div>
+	
+	
+	
+	<ul class='steps'>
+		<li test-id='178' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.user_navigates_to_the_url())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User navigates to the URL</div>
+
+
+		</li>
+		<li test-id='179' class='node when Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.user_performs_the_login_process())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When User performs the login process</div>
+
+
+		</li>
+		<li test-id='180' class='node given Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.click_Withdraw())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given User clicks on withdraw</div>
+
+
+		</li>
+		<li test-id='181' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.select_DropDown_button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then select DropDown button and test</div>
+
+
+		</li>
+		<li test-id='182' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.select_Reset_Button())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And check RestButton</div>
+
+
+		</li>
+		<li test-id='183' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.empty_Input_amount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then check withdraw with no value in input</div>
+
+
+		</li>
+		<li test-id='184' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.invalid_input_amount())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then check withdraw with zero amount</div>
+
+
+		</li>
+		<li test-id='185' class='node then Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.Exceed_bank_balance())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then check withdraw with exceed bank amount</div>
+
+
+		</li>
+		<li test-id='186' class='node and Pass' status='Pass'>
+			<div class="step-name" title="(mystepdefs.withdraw.Withdraw_Amount_from_Bank_account())"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And give valid amount and deposite</div>
+
+
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.AssertionError</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Feb 29, 2024 09:05:40 am</td>
+										<td class='linked' test-id='51'>Then I should see an error message indicating please match the requested format</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.AssertionError: actual and expected error did not match
+	at org.testng.Assert.fail(Assert.java:99)
+	at mystepdefs.signup.i_should_see_an_error_message_indicating_please_match_the_requested_format(signup.java:121)
+	at ✽.I should see an error message indicating please match the requested format(file:///C:/Users/hey1d/OneDrive/Desktop/learn/digitalbank/src/test/resources/features/all/sign.feature:7)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>7</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>19</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>97</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 29, 2024 09:04:29 am</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 29, 2024 09:08:49 am</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>00 04 20.235</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>version</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>os</td>
+								<td>windows</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 7,
+				passParent: 6,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				childCount: 19,
+				passChild: 18,
+				failChild: 1,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				grandChildCount: 97,
+				passGrandChild: 96,
+				failGrandChild: 1,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+			};
+			</script>
+		
+		<script>
+			var timeline = {
+			        "Search by TRN no. on the View Checking Accounts":16.713,"Testing dbankdemo Deposit into Account feature":26.711,"Search by TRN no. on the View Savings Accounts":21.234,"User Signup":72.975,"Sign In Functionality":59.455,"Testing dbankdemo Transfer between Accounts feature":22.246,"withdraw":39.252
+			};
+		</script>
+		
+		  <script src='http://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ff53917fbbdb5ef820abbbe4d199a6942dc771ff/v3html/js/extent.js' type='text/javascript'></script>
+		
+		
+		<script type='text/javascript'>
+				
+		</script> 
+
+	</body>
+</html>

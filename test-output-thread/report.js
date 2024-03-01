@@ -1,0 +1,4 @@
+$(document).ready(function() {
+CucumberHTML.timelineItems.pushArray([{"id":"d44efc62-ed9b-4e97-8ce1-587a998f5616","feature":"User Signup","scenario":"Signup with invalid DOB","start":1709267772648,"group":1,"content":"","tags":"","end":1709267777992,"className":"failed"},{"id":"5854fa6e-d58d-4bee-b758-11f8b5ef1dc8","feature":"User Signup","scenario":"Signup with invalid DOB","start":1709267777999,"group":1,"content":"","tags":"","end":1709267783432,"className":"failed"},{"id":"00862330-dd39-4fb4-b64e-45a71661df09","feature":"User Signup","scenario":"Signup with invalid DOB","start":1709267768779,"group":1,"content":"","tags":"","end":1709267772637,"className":"failed"}]);
+CucumberHTML.timelineGroups.pushArray([{"id":1,"content":"Thread[#1,main,5,main]"}]);
+});

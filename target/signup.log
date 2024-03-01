@@ -1,0 +1,9 @@
+10:06:12.207 [main] INFO  - user is on signup page
+10:06:12.555 [main] INFO  - user enters his information with invalid DOB
+10:06:12.608 [main] INFO  - user clciks on next button
+10:06:17.568 [main] INFO  - user is on signup page
+10:06:17.909 [main] INFO  - user enters his information with invalid DOB
+10:06:17.965 [main] INFO  - user clciks on next button
+10:06:22.861 [main] INFO  - user is on signup page
+10:06:23.337 [main] INFO  - user enters his information with invalid DOB
+10:06:23.402 [main] INFO  - user clciks on next button

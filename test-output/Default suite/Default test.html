@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Feb 29 16:44:02 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>27 seconds (27305 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runners.myrunner.runScenario()'><b>runScenario</b><br>Test class: runners.myrunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Testing Deposit into Account", "Testing dbankdemo Deposit into Account feature"</td>
+<td><div><pre>java.lang.AssertionError: Assert failed- Reading amount as 0 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at mystepdefs.Deposit_Step_def.validating_submit_button_with_amount_field_as_zero(Deposit_Step_def.java:72)
+	at ✽.Validating Submit button with Amount field as zero(file:///C:/Users/hey1d/OneDrive/Desktop/learn/digitalbank/src/test/resources/features/all/deposits.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace676692948", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace676692948'><pre>java.lang.AssertionError: Assert failed- Reading amount as 0 expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at mystepdefs.Deposit_Step_def.validating_submit_button_with_amount_field_as_zero(Deposit_Step_def.java:72)
+	at ✽.Validating Submit button with Amount field as zero(file:///C:/Users/hey1d/OneDrive/Desktop/learn/digitalbank/src/test/resources/features/all/deposits.feature:7)
+</pre></div></td>
+<td>24</td>
+<td>runners.myrunner@48f2bd5b</td></tr>
+</table><p>
+</body>
+</html>

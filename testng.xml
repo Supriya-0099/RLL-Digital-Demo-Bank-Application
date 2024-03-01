@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Your Suite Name" verbose="1" >
+    <listeners>
+        <listener class-name="listeners.screenshot" />
+        <listener class-name="listeners.annotations" />
+    </listeners>
+
+    <test name="Your Test">
+        <classes>
+            <class name="runners.myrunner"/>
+        </classes>
+    </test>
+</suite>
